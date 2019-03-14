@@ -2,21 +2,28 @@ package books.microServices.controller;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import books.microServices.model.BookSpecIllegalException;
 import books.microServices.model.BookSpecs;
 
 @RestController
 public class BooksController {
 
+	private enum urlContentMappingValues {isbn, title, detailed};
+	
 	private Map<String, BookSpecs> books = new ConcurrentHashMap<>();
-	//TODO: update the books map in default c'tor from DB.
+	
 	
 	
 	@RequestMapping(
@@ -37,12 +44,34 @@ public class BooksController {
 			path="/books/all",
 			method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
-	public BookSpecs[] getBooksDetails(@RequestParam(name="content", required=true) String content) {
-		if(content.equals("detailed")) 
+	public Object[] getBooksDetails(@RequestParam(name="content", required=true) String content) throws BookSpecIllegalException {
+		
+		if(content.equalsIgnoreCase(urlContentMappingValues.detailed.name())) 
 			return this.books.values().toArray(new BookSpecs[0]);
-			
-		return null;
-			
+		else if(content.equalsIgnoreCase(urlContentMappingValues.isbn.name()))
+			return this.books.keySet().toArray(new String[0]);
+		else if(content.equalsIgnoreCase(urlContentMappingValues.title.name())) {
+			return this.books.values().stream()
+								.map(book->book.getTitle())
+								.collect(Collectors.toList())
+								.toArray(new String[0]);
+		}
+		else {
+			throw new BookSpecIllegalException("Couldn't find the path: /books/all?content=" +content);
+		}
+						
 	}
+	
+	
+//	@ExceptionHandler		//set this func as the exception handler
+//	@ResponseStatus(value=HttpStatus.NOT_FOUND)	//return 404 status
+//	public BookSpecIllegalException handleException(BookSpecIllegalException e) {
+//		e.printStackTrace();
+//		
+//		return new BookSpecIllegalException(new String[] {"error" + e.getMessage()});
+//	}
+	
+	
+	
 
 }
