@@ -22,50 +22,55 @@ import books.microServices.model.BookSpecs;
 public class BooksController {
 
 	private enum urlContentMappingValues {isbn, title, detailed};
-	
+
 	private Map<String, BookSpecs> books = new ConcurrentHashMap<>();
-	
+
 	@RequestMapping(
 			path="/books/echo",
 			method=RequestMethod.POST,
 			produces=MediaType.APPLICATION_JSON_VALUE,
 			consumes=MediaType.APPLICATION_JSON_VALUE)
 	public BookSpecs createBook(@RequestBody BookSpecs book) throws BookSpecIllegalException  {
-		
+
 		BookSpecs newBookToInsert = new BookSpecs(book);
 		books.put(newBookToInsert.getIsbn(), newBookToInsert);
-		
+
 		return book;
 	}
-	
+
 	@RequestMapping( 
 			path="/books/all",
 			method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	public Object[] getBooksDetails(@RequestParam(name="content", required=true) String content) throws BookSpecIllegalException {
 		
-		if(content.equalsIgnoreCase(urlContentMappingValues.detailed.name())) 
-			return this.books.values().toArray(new BookSpecs[0]);
-		else if(content.equalsIgnoreCase(urlContentMappingValues.isbn.name()))
-			return this.books.keySet().toArray(new String[0]);
-		else if(content.equalsIgnoreCase(urlContentMappingValues.title.name())) {
-			return this.books.values().stream()
-								.map(book->book.getTitle())
-								.collect(Collectors.toList())
-								.toArray(new String[0]);
+		if(!this.books.isEmpty()) {
+			if(content.equalsIgnoreCase(urlContentMappingValues.detailed.name())) 
+				return this.books.values().toArray(new BookSpecs[0]);
+			else if(content.equalsIgnoreCase(urlContentMappingValues.isbn.name()))
+				return this.books.keySet().toArray(new String[0]);
+			else if(content.equalsIgnoreCase(urlContentMappingValues.title.name())) {
+				return this.books.values().stream()
+						.map(book->book.getTitle())
+						.collect(Collectors.toList())
+						.toArray(new String[0]);
+			}
+			else 
+				throw new BookSpecIllegalException("Couldn't find the path: /books/all?content=" + content);
+			
 		}
-		else {
-			throw new BookSpecIllegalException("Couldn't find the path: /books/all?content=" +content);
-		}
-						
+		else 
+			throw new BookSpecIllegalException("Couldn't find books");
+		
+
 	}
-	
+
 	@RequestMapping(
 			path="/books/byIsbn/{isbn}",
 			method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	public BookSpecs getByIsbn(@PathVariable("isbn") String isbn) throws BookSpecIllegalException {
-		
+
 		if (books.containsKey(isbn)) {
 			return books.get(isbn);
 		}
@@ -73,24 +78,24 @@ public class BooksController {
 			throw new BookSpecIllegalException("Couldn't find book with isbn code: " + isbn);
 		}
 	}
-	
+
 	@RequestMapping(
 			path="/books",
 			method=RequestMethod.DELETE)
 	public void deleteAll() {
 		books.clear();
 	}
-	
-	
+
+
 	@ExceptionHandler		//set this func as the exception handler
 	@ResponseStatus(value=HttpStatus.NOT_FOUND)	//return 404 status
 	public String handleException(BookSpecIllegalException e) {
-	//	e.printStackTrace();
-		
+		//	e.printStackTrace();
+
 		return new String("error: " + e.getMessage());
 	}
-	
-	
-	
+
+
+
 
 }
