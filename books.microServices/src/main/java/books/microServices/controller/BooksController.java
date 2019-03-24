@@ -31,11 +31,16 @@ public class BooksController {
 			produces=MediaType.APPLICATION_JSON_VALUE,
 			consumes=MediaType.APPLICATION_JSON_VALUE)
 	public BookSpecs createBook(@RequestBody BookSpecs book) throws BookSpecIllegalException  {
-
-		BookSpecs newBookToInsert = new BookSpecs(book);
-		books.put(newBookToInsert.getIsbn(), newBookToInsert);
-
+		
+		books.put(book.getIsbn(), book);
 		return book;
+	}
+	
+	private void verifyContentValue(String content) throws BookSpecIllegalException {
+		if(!content.equalsIgnoreCase(urlContentMappingValues.detailed.name()) && 
+		   !content.equalsIgnoreCase(urlContentMappingValues.isbn.name()) &&
+		   !content.equalsIgnoreCase(urlContentMappingValues.title.name()))
+			throw new BookSpecIllegalException("Couldn't find the path: /books/all?content=" + content);
 	}
 
 	@RequestMapping( 
@@ -44,20 +49,20 @@ public class BooksController {
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	public Object[] getBooksDetails(@RequestParam(name="content", required=true) String content) throws BookSpecIllegalException {
 		
+		
+		verifyContentValue(content);
+		
 		if(!this.books.isEmpty()) {
 			if(content.equalsIgnoreCase(urlContentMappingValues.detailed.name())) 
 				return this.books.values().toArray(new BookSpecs[0]);
 			else if(content.equalsIgnoreCase(urlContentMappingValues.isbn.name()))
 				return this.books.keySet().toArray(new String[0]);
-			else if(content.equalsIgnoreCase(urlContentMappingValues.title.name())) {
+			else  {	//content = title
 				return this.books.values().stream()
 						.map(book->book.getTitle())
 						.collect(Collectors.toList())
 						.toArray(new String[0]);
 			}
-			else 
-				throw new BookSpecIllegalException("Couldn't find the path: /books/all?content=" + content);
-			
 		}
 		else 
 			throw new BookSpecIllegalException("Couldn't find books");

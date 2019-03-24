@@ -2,14 +2,13 @@ package books.microServices.model;
 
 import java.time.Year;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class BookSpecs {
 
 	private String isbn;
 	private String title;
-	private List<String> authors;
+	private List<String> authors = new ArrayList<>();
 	private String publisher;
 	private int publishedYear;
 	private int rating;
@@ -69,7 +68,6 @@ public class BookSpecs {
 	
 	public void setAuthors(List<String> authors) throws BookSpecIllegalException {
 		if(authors.size() > 0) {
-			this.authors = new ArrayList<>();
 			for (String author : authors) 
 				addAuthor(author);			
 		}
@@ -109,7 +107,7 @@ public class BookSpecs {
 	}
 	
 	public void setRating(int rating) throws BookSpecIllegalException{
-		if(rating >= 0 && rating <= 6)
+		if(rating >= 0 && rating <= 5)
 			this.rating = rating;
 		else 
 			throw new BookSpecIllegalException("Illegal rating value: " + rating);
