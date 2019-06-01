@@ -1565,3 +1565,1906 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:27:16.234
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.kbgRlEdB => OK
+!SESSION 2019-05-18 23:58:35.285 -----------------------------------------------
+eclipse.buildId=4.1.0.201812201400-RELEASE
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2019-05-18 23:59:25.215
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-18 23:59:25.215
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39ae6408,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@cfacf0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-18 23:59:31.264
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sergei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.osgi 2 0 2019-05-18 23:59:37.288
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer", thread "Thread[Worker-2: Update dynamic Java sources working sets,5,main]" timed out waiting (5010ms) for thread "Thread[Worker-7: Initializing Java Tooling,5,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.10.0.20181127-2120 [279]". To avoid deadlock, thread "Thread[Worker-2: Update dynamic Java sources working sets,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.10.0.20181127-2120"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=279] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:344)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	... 39 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 4 2 2019-05-18 23:59:39.312
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.DynamicProjectReferences.getDependentProjects(DynamicProjectReferences.java:37)
+	at org.eclipse.core.internal.resources.ProjectDescription.computeDynamicReferencesForProject(ProjectDescription.java:952)
+	at org.eclipse.core.internal.resources.ProjectDescription.getAllBuildConfigReferences(ProjectDescription.java:268)
+	at org.eclipse.core.internal.resources.ProjectDescription.getAllReferences(ProjectDescription.java:224)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:473)
+	at org.eclipse.ui.actions.CloseUnrelatedProjectsAction.buildConnectedComponents(CloseUnrelatedProjectsAction.java:82)
+	at org.eclipse.ui.actions.CloseUnrelatedProjectsAction.computeRelated(CloseUnrelatedProjectsAction.java:205)
+	at org.eclipse.ui.actions.CloseUnrelatedProjectsAction.getSelectedResources(CloseUnrelatedProjectsAction.java:225)
+	at org.eclipse.ui.actions.SelectionListenerAction.selectionIsOfType(SelectionListenerAction.java:243)
+	at org.eclipse.ui.actions.CloseResourceAction.updateSelection(CloseResourceAction.java:225)
+	at org.eclipse.ui.actions.BaseSelectionListenerAction.selectionChanged(BaseSelectionListenerAction.java:127)
+	at org.eclipse.jdt.ui.actions.ProjectActionGroup.performSelectionChanged(ProjectActionGroup.java:140)
+	at org.eclipse.jdt.ui.actions.ProjectActionGroup$1.selectionChanged(ProjectActionGroup.java:118)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:158)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:155)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2182)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1225)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1254)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:243)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:238)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:403)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:50.308
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:50.316
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@18a0153b[org.springframework.tooling.boot.ls:1.2.0.201812201040(id=531)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:50.326
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:50.443
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.776
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.dcULiuTJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.781
+!MESSAGE subscribing to classpath changes: sts4.classpath.dcULiuTJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.788
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.793
+!MESSAGE subsribers = [sts4.classpath.dcULiuTJ]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.798
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.803
+!MESSAGE project reactive.loan ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.808
+!MESSAGE project books.microServices ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.812
+!MESSAGE Preparing classpath changed notification reactive.loan
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.815
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.819
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.822
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.dcULiuTJ => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.836
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.840
+!MESSAGE executing callback sts4.classpath.dcULiuTJ reactive.loan false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.957
+!MESSAGE executing callback sts4.classpath.dcULiuTJ SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.961
+!MESSAGE Preparing classpath changed notification books.microServices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.966
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.984
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:53.992
+!MESSAGE executing callback sts4.classpath.dcULiuTJ books.microServices false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-18 23:59:54.098
+!MESSAGE executing callback sts4.classpath.dcULiuTJ SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2019-05-18 23:59:54.540
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:168)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-19 00:15:26.804
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.dcULiuTJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-19 00:15:26.808
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.dcULiuTJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-19 00:15:26.813
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-19 00:15:26.817
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.dcULiuTJ => OK
+!SESSION 2019-05-27 14:14:39.027 -----------------------------------------------
+eclipse.buildId=4.1.0.201812201400-RELEASE
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2019-05-27 14:14:46.184
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-27 14:14:46.184
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@513fab1e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@53d87b2d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:51.124
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:51.136
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@445af8a6[org.springframework.tooling.boot.ls:1.2.0.201812201040(id=531)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:51.145
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:51.240
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-27 14:14:51.521
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sergei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.641
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.jLMnxlur
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.646
+!MESSAGE subscribing to classpath changes: sts4.classpath.jLMnxlur
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.655
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.660
+!MESSAGE subsribers = [sts4.classpath.jLMnxlur]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.665
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.933
+!MESSAGE project reactive.loan ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.945
+!MESSAGE project books.microServices ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.952
+!MESSAGE Preparing classpath changed notification reactive.loan
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.963
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.970
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.977
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.jLMnxlur => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:56.998
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:57.005
+!MESSAGE executing callback sts4.classpath.jLMnxlur reactive.loan false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:57.151
+!MESSAGE executing callback sts4.classpath.jLMnxlur SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:57.157
+!MESSAGE Preparing classpath changed notification books.microServices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:57.163
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:57.238
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:57.245
+!MESSAGE executing callback sts4.classpath.jLMnxlur books.microServices false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-27 14:14:57.343
+!MESSAGE executing callback sts4.classpath.jLMnxlur SUCCESS [done]
+
+!ENTRY org.eclipse.ui 4 0 2019-05-27 23:32:54.953
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:147)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4580)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setVisible(UIElementImpl.java:349)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributionRecord.updateVisibility(ContributionRecord.java:113)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:194)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:258)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:115)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:95)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:474)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:468)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5148)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4797)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:253)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3985)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3541)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.tm4e.ui.internal.menus.ThemeContribution.getContributionItems(ThemeContribution.java:59)
+	at org.eclipse.ui.actions.CompoundContributionItem.getContributionItemsToFill(CompoundContributionItem.java:83)
+	at org.eclipse.ui.actions.CompoundContributionItem.fill(CompoundContributionItem.java:57)
+	at org.eclipse.ui.internal.menus.DynamicMenuContributionItem.fill(DynamicMenuContributionItem.java:150)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:731)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:813)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:672)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.scheduleManagerUpdate(MenuManagerRenderer.java:1222)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.subscribeUIElementTopicAllRenderedVisibility(MenuManagerRenderer.java:203)
+	at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 64 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 01:37:43.431
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.jLMnxlur
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 01:37:43.436
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.jLMnxlur
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 01:37:43.441
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 01:37:43.445
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.jLMnxlur => OK
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-05-28 01:37:48.225
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob
+!SESSION 2019-05-30 18:32:12.474 -----------------------------------------------
+eclipse.buildId=4.1.0.201812201400-RELEASE
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2019-05-30 18:48:30.849
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-30 18:48:30.849
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@513fab1e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@53d87b2d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-30 18:48:42.366
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sergei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:44.118
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:44.124
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@199f5012[org.springframework.tooling.boot.ls:1.2.0.201812201040(id=531)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:44.142
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:44.326
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.osgi 2 0 2019-05-30 18:48:48.734
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer", thread "Thread[Worker-2: Initializing Java Tooling,5,main]" timed out waiting (5005ms) for thread "Thread[org.eclipse.jdt.internal.ui.text.JavaReconciler,1,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.10.0.20181127-2120 [279]". To avoid deadlock, thread "Thread[Worker-2: Initializing Java Tooling,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.10.0.20181127-2120"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=279] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:344)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4454)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	... 27 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4454)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.osgi 2 0 2019-05-30 18:48:48.756
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer", thread "Thread[Worker-1: Update dynamic Java sources working sets,5,main]" timed out waiting (5004ms) for thread "Thread[org.eclipse.jdt.internal.ui.text.JavaReconciler,1,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.10.0.20181127-2120 [279]". To avoid deadlock, thread "Thread[Worker-1: Update dynamic Java sources working sets,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.10.0.20181127-2120"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=279] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:344)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	... 39 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.388
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.olNmXgfr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.393
+!MESSAGE subscribing to classpath changes: sts4.classpath.olNmXgfr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.397
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.402
+!MESSAGE subsribers = [sts4.classpath.olNmXgfr]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.406
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.414
+!MESSAGE project reactive.loan ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.419
+!MESSAGE project books.microServices ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.424
+!MESSAGE Preparing classpath changed notification reactive.loan
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.428
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.432
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:51.437
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.olNmXgfr => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:52.720
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:52.727
+!MESSAGE executing callback sts4.classpath.olNmXgfr reactive.loan false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:52.895
+!MESSAGE executing callback sts4.classpath.olNmXgfr SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:52.903
+!MESSAGE Preparing classpath changed notification books.microServices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:52.910
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.eclipse.osgi 2 0 2019-05-30 18:48:53.758
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathHelpers", thread "Thread[Worker-2: Initializing Java Tooling,5,main]" timed out waiting (5001ms) for thread "Thread[org.eclipse.jdt.internal.ui.text.JavaReconciler,1,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.10.0.20181127-2120 [279]". To avoid deadlock, thread "Thread[Worker-2: Initializing Java Tooling,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathHelpers" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.10.0.20181127-2120"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=279] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:344)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:44)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4454)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	... 21 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:44)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4454)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-05-30 18:48:58.716
+!MESSAGE An internal error occurred during: "Initializing Java Tooling".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.getBuildPathManager(MavenClasspathContainerInitializer.java:80)
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4454)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2019-05-30 18:48:58.924
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2431)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:78)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:58.934
+!MESSAGE executing callback sts4.classpath.olNmXgfr books.microServices false 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 18:48:58.946
+!MESSAGE executing callback sts4.classpath.olNmXgfr SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:19:36.737
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.olNmXgfr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:19:36.786
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.olNmXgfr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:19:36.790
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:19:36.794
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.olNmXgfr => OK
+!SESSION 2019-05-30 22:23:27.494 -----------------------------------------------
+eclipse.buildId=4.1.0.201812201400-RELEASE
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2019-05-30 22:24:08.212
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-30 22:24:08.212
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@118a4d5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6cb194f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-30 22:24:14.046
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sergei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:25.548
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:25.553
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@9653a9[org.springframework.tooling.boot.ls:1.2.0.201812201040(id=531)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:25.559
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:25.818
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.882
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.OPQVLLen
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.887
+!MESSAGE subscribing to classpath changes: sts4.classpath.OPQVLLen
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.892
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.897
+!MESSAGE subsribers = [sts4.classpath.OPQVLLen]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.901
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.909
+!MESSAGE project reactive.loan ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.914
+!MESSAGE project books.microServices ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.917
+!MESSAGE Preparing classpath changed notification reactive.loan
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.921
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.927
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:31.931
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.OPQVLLen => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:32.591
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:32.594
+!MESSAGE executing callback sts4.classpath.OPQVLLen reactive.loan false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:32.717
+!MESSAGE executing callback sts4.classpath.OPQVLLen SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:32.721
+!MESSAGE Preparing classpath changed notification books.microServices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:32.725
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:33.162
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:33.166
+!MESSAGE executing callback sts4.classpath.OPQVLLen books.microServices false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-30 22:24:33.253
+!MESSAGE executing callback sts4.classpath.OPQVLLen SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 00:01:16.660
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.OPQVLLen
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 00:01:16.665
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.OPQVLLen
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 00:01:16.670
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 00:01:16.674
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.OPQVLLen => OK
+!SESSION 2019-06-01 17:54:27.491 -----------------------------------------------
+eclipse.buildId=4.1.0.201812201400-RELEASE
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2019-06-01 17:55:01.352
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-06-01 17:55:01.352
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5615f82d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21698e5a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-06-01 17:55:10.772
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sergei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:12.148
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:12.156
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@1a82e471[org.springframework.tooling.boot.ls:1.2.0.201812201040(id=531)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:12.164
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:12.261
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.343
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.RpQmsSuH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.349
+!MESSAGE subscribing to classpath changes: sts4.classpath.RpQmsSuH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.356
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.365
+!MESSAGE subsribers = [sts4.classpath.RpQmsSuH]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.372
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.384
+!MESSAGE project reactive.loan ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.391
+!MESSAGE project books.microServices ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.398
+!MESSAGE Preparing classpath changed notification reactive.loan
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.404
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.410
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.416
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.RpQmsSuH => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.436
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.443
+!MESSAGE executing callback sts4.classpath.RpQmsSuH reactive.loan false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.581
+!MESSAGE executing callback sts4.classpath.RpQmsSuH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.588
+!MESSAGE Preparing classpath changed notification books.microServices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:16.594
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.eclipse.osgi 2 0 2019-06-01 17:55:16.794
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer", thread "Thread[Worker-4: Update dynamic Java sources working sets,5,main]" timed out waiting (5005ms) for thread "Thread[Worker-7: Initializing Java Tooling,5,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.10.0.20181127-2120 [279]". To avoid deadlock, thread "Thread[Worker-4: Update dynamic Java sources working sets,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.10.0.20181127-2120"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=279] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:344)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	... 39 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.osgi 2 0 2019-06-01 17:55:21.605
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer", thread "Thread[Worker-9: SendClasspath notification,5,main]" timed out waiting (5001ms) for thread "Thread[Worker-7: Initializing Java Tooling,5,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.10.0.20181127-2120 [279]". To avoid deadlock, thread "Thread[Worker-9: SendClasspath notification,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.10.0.20181127-2120"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=279] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:344)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2431)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:78)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	... 31 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3708)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3684)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3176)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2431)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:78)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.osgi 2 0 2019-06-01 17:55:21.805
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathHelpers", thread "Thread[Worker-4: Update dynamic Java sources working sets,5,main]" timed out waiting (5002ms) for thread "Thread[Worker-7: Initializing Java Tooling,5,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.10.0.20181127-2120 [279]". To avoid deadlock, thread "Thread[Worker-4: Update dynamic Java sources working sets,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathHelpers" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.10.0.20181127-2120"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=279] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:344)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:44)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	... 33 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:341)
+	at org.eclipse.osgi.container.Module.start(Module.java:408)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:44)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2273)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2019-06-01 17:55:23.589
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2431)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:78)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 4 2 2019-06-01 17:55:23.594
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.DynamicProjectReferences.getDependentProjects(DynamicProjectReferences.java:37)
+	at org.eclipse.core.internal.resources.ProjectDescription.computeDynamicReferencesForProject(ProjectDescription.java:952)
+	at org.eclipse.core.internal.resources.ProjectDescription.getAllBuildConfigReferences(ProjectDescription.java:268)
+	at org.eclipse.core.internal.resources.ProjectDescription.getAllReferences(ProjectDescription.java:224)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:473)
+	at org.eclipse.ui.actions.CloseUnrelatedProjectsAction.buildConnectedComponents(CloseUnrelatedProjectsAction.java:82)
+	at org.eclipse.ui.actions.CloseUnrelatedProjectsAction.computeRelated(CloseUnrelatedProjectsAction.java:205)
+	at org.eclipse.ui.actions.CloseUnrelatedProjectsAction.getSelectedResources(CloseUnrelatedProjectsAction.java:225)
+	at org.eclipse.ui.actions.SelectionListenerAction.selectionIsOfType(SelectionListenerAction.java:243)
+	at org.eclipse.ui.actions.CloseResourceAction.updateSelection(CloseResourceAction.java:225)
+	at org.eclipse.ui.actions.BaseSelectionListenerAction.selectionChanged(BaseSelectionListenerAction.java:127)
+	at org.eclipse.jdt.ui.actions.ProjectActionGroup.performSelectionChanged(ProjectActionGroup.java:140)
+	at org.eclipse.jdt.ui.actions.ProjectActionGroup$1.selectionChanged(ProjectActionGroup.java:118)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:158)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:155)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2182)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1225)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1254)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:243)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:238)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:403)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.eclipse.jdt.core 4 4 2019-06-01 17:55:23.598
+!MESSAGE Exception occurred during problem detection:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package loan.controller;
+
+import java.util.Date;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+
+import loan.logic.InvalidInputException;
+import loan.logic.LoanService;
+import loan.model.LoanDetails;
+import loan.model.ReaderDetails;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@RestController
+public class LoanController {
+
+	private LoanService loanService;
+	
+	@Autowired
+	public LoanController(LoanService loanService) {
+		this.loanService = loanService;
+	}
+	
+	@PostMapping(
+			path="/loans/{isbn}",
+			consumes=MediaType.APPLICATION_JSON_VALUE,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	public Mono<LoanDetails> createLoan(/*@Valid*/ @RequestBody ReaderDetails reader, @PathVariable("isbn") String isbn) throws InvalidInputException{
+		System.err.println("READER: " + reader);
+		 return this.loanService.createLoan(reader, isbn);
+	}
+	
+	@PutMapping(
+			path="/loans/{loanId}",
+			consumes=MediaType.APPLICATION_JSON_VALUE)
+	public Mono<Void> returnLoanedBook(@RequestBody LoanDetails loan, @PathVariable("loanId") String loanId){
+		return this.loanService.returnLoanedBook(loan, loanId).then();
+		
+	}
+	
+	@GetMapping(
+			path="/loans/{loanId}",
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	public Mono<LoanDetails> getLoanById(@PathVariable("loanId") String loanId){
+		return this.loanService.getLoanById(loanId);
+	}
+	
+	//added empty params field to resolve ambiguity in GET /loans...
+	@GetMapping(
+			path="/loans",
+			params="",
+			produces=MediaType.TEXT_EVENT_STREAM_VALUE)
+	public Flux<LoanDetails> getAllLoans(){
+		return this.loanService.getAllLoans();
+		
+	}
+	
+	@GetMapping(
+			path="/loans",
+			params="byIsbn",
+			produces=MediaType.TEXT_EVENT_STREAM_VALUE)
+	public Flux<LoanDetails> getAllLoansOfBook(@RequestParam(name="byIsbn", required=true) String isbn){
+		return this.loanService.getAllLoansOfBook(isbn);
+	}
+	
+
+	@GetMapping(
+			path="/loans",
+			params="status",
+			produces=MediaType.TEXT_EVENT_STREAM_VALUE)
+	public Flux<LoanDetails> getAllReturnedLoans(@RequestParam(name="status", required=true) String status){
+		if(status.equalsIgnoreCase("returned"))
+			return this.loanService.getAllReturnedLoans();
+		else
+			throw new RuntimeException("Wrong status value: " + status);
+	}
+	
+	@DeleteMapping(path="/loans")
+	public Mono<Void> deleteAllLoans(){
+		return this.loanService.deleteAllLoans();
+	}
+	
+	
+	//optional for bonus
+	
+	@GetMapping(
+			path="/loans",
+			params= {"fromDate","toDate"},
+			produces=MediaType.TEXT_EVENT_STREAM_VALUE) 
+	public Flux<LoanDetails> getLoansInDateRange(
+			@RequestParam(name="fromDate", required=true) @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) Date from,
+			@RequestParam(name="toDate", required=true) @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) Date until){
+	
+		return this.loanService.getLoansInDateRange(from, until);
+	}
+	
+	
+	@GetMapping(
+			path="/loans",
+			params="byReader",
+			produces=MediaType.TEXT_EVENT_STREAM_VALUE
+			)
+	public Flux<LoanDetails> getLoansOfReaderByEmail(@RequestParam(name="byReader", required=true) String email) throws InvalidInputException {
+		System.out.println("LoanController.getLoansOfReaderByEmail()");
+		return this.loanService.getLoansOfReaderByEmail(email);
+		
+	}
+	
+
+	
+
+
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaProject.getProjectCache(JavaProject.java:2356)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:330)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2777)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:93)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:114)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:32)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:253)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:188)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:122)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:139)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:423)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:23.603
+!MESSAGE executing callback sts4.classpath.RpQmsSuH books.microServices false 0
+
+!ENTRY org.eclipse.jdt.ui 4 2 2019-06-01 17:55:23.610
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 1
+Java Model Exception: java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:324)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:188)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:122)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:139)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:423)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaProject.getProjectCache(JavaProject.java:2356)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:330)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2777)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:93)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:114)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:32)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:253)
+	... 17 more
+Caused by: java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaProject.getProjectCache(JavaProject.java:2356)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:330)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2777)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:93)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:114)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:32)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:253)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:188)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:122)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:139)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:423)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1005 2019-06-01 17:55:23.611
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaProject.getProjectCache(JavaProject.java:2356)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:330)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2777)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:93)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:114)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:32)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:253)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:188)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:122)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:139)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:423)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1005 2019-06-01 17:55:23.611
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaProject.getProjectCache(JavaProject.java:2356)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:330)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2777)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:93)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:114)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:32)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:253)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:188)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:122)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:139)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:423)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 17:55:23.615
+!MESSAGE executing callback sts4.classpath.RpQmsSuH SUCCESS [done]
+
+!ENTRY org.eclipse.jdt.ui 4 0 2019-06-01 17:55:23.619
+!MESSAGE Error in JDT Core during reconcile
+!STACK 1
+Java Model Exception: java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:324)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:188)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:122)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:139)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:423)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaProject.getProjectCache(JavaProject.java:2356)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:330)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2777)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:93)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:114)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:32)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:253)
+	... 17 more
+Caused by: java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaProject.getProjectCache(JavaProject.java:2356)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:330)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2777)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:93)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:114)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:32)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:253)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:188)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:122)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:139)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:423)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1005 2019-06-01 17:55:23.620
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3195)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3079)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3141)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2111)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3661)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3156)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3320)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2397)
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaProject.getProjectCache(JavaProject.java:2356)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:330)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2777)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:93)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:114)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:32)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:253)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:188)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:122)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:139)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:423)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+
+!ENTRY org.eclipse.lsp4e 4 0 2019-06-01 17:55:58.713
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:168)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 18:05:40.644
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.RpQmsSuH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 18:05:40.695
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.RpQmsSuH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 18:05:40.699
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-01 18:05:40.703
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.RpQmsSuH => OK
